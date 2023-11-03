@@ -1,0 +1,12 @@
+{
+    "components": [
+      "nearukraineguild.near/widget/IAH-account-verifier",
+      "mattb.near/widget/NDC.Components.ProgressMeterHumans",
+      "minorityprogrammers.near/widget/IAH-Gate",
+      "nearefi.near/widget/NDC.verifyHuman",
+      "hack.near/widget/verified.humans",
+      "ndcplug.near/widget/NDC.verifyHuman",
+     ""
+    ]
+  }
+  

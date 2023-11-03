@@ -1,0 +1,313 @@
+{
+  roles: [
+    {
+      name: 'admin',
+      kind: { Group: [ 'dao-bot.keypom.near' ] },
+      permissions: [
+        'add_member_to_role:AddProposal',
+        'add_member_to_role:VoteRemove',
+        'add_member_to_role:VoteApprove',
+        'add_member_to_role:VoteReject'
+      ],
+      vote_policy: {
+        transfer: {
+          weight_kind: 'RoleWeight',
+          quorum: '0',
+          threshold: [ 23, 100 ]
+        },
+        bounty_done: {
+          weight_kind: 'RoleWeight',
+          quorum: '0',
+          threshold: [ 23, 100 ]
+        },
+        add_bounty: {
+          weight_kind: 'RoleWeight',
+          quorum: '0',
+          threshold: [ 23, 100 ]
+        },
+        policy: {
+          weight_kind: 'RoleWeight',
+          quorum: '0',
+          threshold: [ 23, 100 ]
+        },
+        call: {
+          weight_kind: 'RoleWeight',
+          quorum: '0',
+          threshold: [ 23, 100 ]
+        },
+        upgrade_self: {
+          weight_kind: 'RoleWeight',
+          quorum: '0',
+          threshold: [ 23, 100 ]
+        },
+        config: {
+          weight_kind: 'RoleWeight',
+          quorum: '0',
+          threshold: [ 23, 100 ]
+        },
+        set_vote_token: {
+          weight_kind: 'RoleWeight',
+          quorum: '0',
+          threshold: [ 23, 100 ]
+        },
+        upgrade_remote: {
+          weight_kind: 'RoleWeight',
+          quorum: '0',
+          threshold: [ 23, 100 ]
+        },
+        vote: {
+          weight_kind: 'RoleWeight',
+          quorum: '0',
+          threshold: [ 23, 100 ]
+        },
+        add_member_to_role: {
+          weight_kind: 'RoleWeight',
+          quorum: '0',
+          threshold: [ 23, 100 ]
+        },
+        remove_member_from_role: {
+          weight_kind: 'RoleWeight',
+          quorum: '0',
+          threshold: [ 23, 100 ]
+        }
+      }
+    },
+    {
+      name: 'all',
+      kind: 'Everyone',
+      permissions: [
+        'vote:VoteReject',
+        'call:AddProposal',
+        'add_bounty:AddProposal',
+        'add_member_to_role:AddProposal',
+        'transfer:AddProposal',
+        'vote:VoteApprove',
+        'bounty_done:AddProposal',
+        'remove_member_from_role:AddProposal',
+        'vote:AddProposal',
+        'vote:VoteRemove'
+      ],
+      vote_policy: {}
+    },
+    {
+      name: 'community',
+      kind: {
+        Group: [
+          'futurevisions.near',
+          'mintlu.near',
+          'devs.near',
+          'multi.near',
+          'c74edb82759f476010ce8363e6be15fcb3cfebf9be6320d6cdc3588f1a5b4c0e',
+          'chloe.near',
+          'joannaorlova.near',
+          'manzanal.near',
+          'ootengu.near',
+          'pochita.near',
+          'root.benjiman.near',
+          'nearjordan.near'
+        ]
+      },
+      permissions: [
+        'policy:AddProposal',
+        'set_vote_token:AddProposal',
+        'bounty_done:AddProposal',
+        'upgrade_self:AddProposal',
+        'upgrade_remote:AddProposal',
+        'transfer:AddProposal',
+        'remove_member_from_role:AddProposal',
+        '*:Finalize',
+        'add_member_to_role:AddProposal',
+        'call:AddProposal',
+        'config:AddProposal',
+        'vote:VoteApprove',
+        'vote:VoteRemove',
+        'vote:VoteReject',
+        'vote:AddProposal',
+        'add_bounty:AddProposal'
+      ],
+      vote_policy: {
+        add_member_to_role: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        policy: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        vote: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        set_vote_token: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        remove_member_from_role: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        transfer: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        add_bounty: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        upgrade_self: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        bounty_done: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        call: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        config: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        upgrade_remote: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] }
+      }
+    },
+    {
+      name: 'ai builders',
+      kind: { Group: [ 'mr27.near' ] },
+      permissions: [],
+      vote_policy: {
+        transfer: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        upgrade_self: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        remove_member_from_role: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        set_vote_token: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        bounty_done: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        policy: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        add_member_to_role: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        call: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        config: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        upgrade_remote: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        vote: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        add_bounty: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] }
+      }
+    },
+    {
+      name: 'Rust',
+      kind: { Group: [ 'hack.near' ] },
+      permissions: [],
+      vote_policy: {
+        add_member_to_role: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        remove_member_from_role: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        set_vote_token: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        call: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        transfer: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        upgrade_remote: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        vote: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        upgrade_self: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        config: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        add_bounty: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        policy: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        bounty_done: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] }
+      }
+    },
+    {
+      name: 'JavaScript',
+      kind: { Group: [ 'hack.near' ] },
+      permissions: [],
+      vote_policy: {
+        bounty_done: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        upgrade_self: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        set_vote_token: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        vote: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        add_member_to_role: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        call: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        transfer: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        upgrade_remote: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        policy: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        add_bounty: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        remove_member_from_role: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        config: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] }
+      }
+    },
+    {
+      name: 'nft builders',
+      kind: { Group: [ 'create.near' ] },
+      permissions: [],
+      vote_policy: {
+        add_member_to_role: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        add_bounty: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        bounty_done: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        call: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        config: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        policy: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        remove_member_from_role: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        set_vote_token: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        transfer: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        upgrade_remote: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        upgrade_self: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        vote: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] }
+      }
+    },
+    {
+      name: 'dao builders',
+      kind: { Group: [ 'gov.near' ] },
+      permissions: [],
+      vote_policy: {
+        config: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        upgrade_remote: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        upgrade_self: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        policy: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        add_member_to_role: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        set_vote_token: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        transfer: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        call: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        vote: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        bounty_done: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        remove_member_from_role: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        add_bounty: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] }
+      }
+    },
+    {
+      name: 'council',
+      kind: { Group: [ 'hack.near' ] },
+      permissions: [
+        'add_bounty:AddProposal',
+        'config:VoteApprove',
+        'vote:VoteRemove',
+        'upgrade_self:AddProposal',
+        'upgrade_self:VoteReject',
+        'add_member_to_role:VoteRemove',
+        'transfer:AddProposal',
+        'remove_member_from_role:VoteReject',
+        'transfer:VoteRemove',
+        'add_bounty:VoteApprove',
+        'add_member_to_role:VoteApprove',
+        'add_member_to_role:VoteReject',
+        'call:VoteReject',
+        'policy:VoteReject',
+        'config:VoteRemove',
+        'upgrade_remote:VoteReject',
+        'add_bounty:VoteReject',
+        'remove_member_from_role:VoteRemove',
+        'upgrade_self:VoteApprove',
+        'add_bounty:VoteRemove',
+        'vote:VoteReject',
+        'vote:VoteApprove',
+        'upgrade_self:VoteRemove',
+        'call:VoteRemove',
+        'call:AddProposal',
+        'config:VoteReject',
+        'remove_member_from_role:AddProposal',
+        'bounty_done:VoteApprove',
+        'policy:VoteRemove',
+        'remove_member_from_role:VoteApprove',
+        'set_vote_token:AddProposal',
+        'upgrade_remote:AddProposal',
+        'upgrade_remote:VoteApprove',
+        'call:VoteApprove',
+        'vote:AddProposal',
+        'config:AddProposal',
+        'bounty_done:AddProposal',
+        'bounty_done:VoteRemove',
+        'transfer:VoteReject',
+        'set_vote_token:VoteReject',
+        'transfer:VoteApprove',
+        'upgrade_remote:VoteRemove',
+        'add_member_to_role:AddProposal',
+        'bounty_done:VoteReject',
+        'policy:VoteApprove',
+        'set_vote_token:VoteApprove',
+        'set_vote_token:VoteRemove',
+        'policy:AddProposal',
+        '*:Finalize'
+      ],
+      vote_policy: {
+        bounty_done: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        policy: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        remove_member_from_role: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        add_bounty: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        add_member_to_role: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        config: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        set_vote_token: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        call: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        transfer: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        upgrade_remote: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        upgrade_self: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+        vote: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] }
+      }
+    }
+  ],
+  default_vote_policy: { weight_kind: 'RoleWeight', quorum: '0', threshold: [ 1, 2 ] },
+  proposal_bond: '100000000000000000000000',
+  proposal_period: '3196800000000000',
+  bounty_bond: '100000000000000000000000',
+  bounty_forgiveness_period: '3196800000000000'
+}
